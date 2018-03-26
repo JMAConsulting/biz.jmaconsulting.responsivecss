@@ -1,4 +1,6 @@
 <?php
+define('HELP_KIDS', 3);
+define('MEMBERSHIP_PAGE', 6);
 
 require_once 'responsivecss.civix.php';
 
@@ -105,4 +107,12 @@ function responsivecss_civicrm_caseTypes(&$caseTypes) {
  */
 function responsivecss_civicrm_alterSettingsFolders(&$metaDataFolders = NULL) {
   _responsivecss_civix_civicrm_alterSettingsFolders($metaDataFolders);
+}
+
+function responsivecss_civicrm_buildForm( $formName, &$form ) {
+  if ($formName == "CRM_Contribute_Form_Contribution_Main"
+    && in_array($form->_id, array(HELP_KIDS, MEMBERSHIP_PAGE))
+  ) {
+    CRM_Core_Resources::singleton()->addStyleFile('org.civicrm.shoreditch', 'css/custom-civicrm.css', -50, 'html-header');
+  }
 }
