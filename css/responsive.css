@@ -1,0 +1,90 @@
+#phplive_btn_1440010062 {
+  display: none;
+}
+
+#header_wrapper {
+  background: #dbcddc !important;
+  border-bottom: none !important;
+}
+
+#main-menu a {
+  font-family: "open_sansbold", Helvetica, Arial, sans-serif !important;
+  font-weight: bold;
+}
+
+.page-civicrm, .page-civicrm #page {
+  background: white !important;
+}
+
+.page-civicrm h1.page-title {
+  box-shadow: none !important;
+  background: none !important;
+  font-size: 20px !important;
+}
+
+.crm-container .credit_card_type-section .crm-credit_card_type-icons a {
+  display: block;
+  float: left;
+  width: 50px;
+  height: 30px;
+  background: url(/sites/all/modules/contrib/civicrm/i/creditcard-icons.png) no-repeat 0 0 transparent;
+    background-position-x: 0px;
+    background-position-y: 0px;
+  text-indent: -20000px;
+  margin-right: 10px;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+  border-radius: 3px;
+  border: 1px solid #FFFFFF;
+}
+
+.crm-container .credit_card_type-section .crm-credit_card_type-icons .crm-credit_card_type-icon-visa {
+  background-position: -52px 0;
+}
+
+.crm-container .credit_card_type-section .crm-credit_card_type-icons .crm-credit_card_type-icon-mastercard {
+  background-position: -100px 0;
+}
+
+.crm-container .credit_card_type-section .crm-credit_card_type-icons .crm-credit_card_type-icon-amex {
+  background-position: -150px 0;
+}
+
+.crm-container .credit_card_type-section .crm-credit_card_type-icons .crm-credit_card_type-icon-discover {
+  background-position: -200px 0;
+}
+
+#billingcheckbox {
+  margin-top: 20px;
+}
+
+label[for=billingcheckbox] {
+  margin-top: 17px;
+  position: absolute;
+}
+
+#navigation ul.links li a, #navigation ul.menu li a {
+  display: block;
+  padding: 8px 25px;
+  font-size: 0.8125em;
+  border-right: 1px solid white;
+  text-transform: uppercase;
+  font-family: "open_sansbold",Helvetica,Arial,sans-serif;
+}
+
+.crm-container legend {
+  line-height: 2 !important;
+}
+
+#civicrm-footer {
+  display: none !important;
+}
+
+#breadcrumbs {
+  display: none !important;
+}
+
+.crm-container .btn-primary, .crm-container #crm-submit-buttons input.crm-form-submit:not(.cancel), .crm-container .crm-button input.crm-form-submit:not(.cancel), .crm-container .crm-form-submit.crm-hover-button:not(.cancel), .crm-container .ui-dialog-buttonset .crm-form-submit.ui-button:not(.cancel), .crm-container a.crm-form-submit.button:not(.cancel), .crm-container input.crm-form-submit[type="button"]:not(.cancel), .crm-container input.crm-form-submit[type="file"]:not(.cancel), .page-civicrm-group .crm-submit-buttons a.newGroup.button, .page-civicrm-admin #crm-main-content-wrapper .crm-submit-buttons a.button, .page-civicrm-a #crm-main-content-wrapper .crm-submit-buttons a.button, .page-civicrm-admin #crm-main-content-wrapper .crm-submit-buttons .crm-button[crm-icon="fa-check"], .page-civicrm-a #crm-main-content-wrapper .crm-submit-buttons .crm-button[crm-icon="fa-check"], .crm-container.ui-dialog .ui-dialog-content a.button:not(.hr-job-info-close), body[class*="page-civicrm-report-"] #report-tab-order-by-elements #optionFieldLink > .form-link, .crm-container #contact-summary-relationship-tab.view-content div.action-link > a.button {
+    color: #fff;
+    background-color: #713673 !important;
+    border-color: #713673 !important;
+}

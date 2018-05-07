@@ -1,6 +1,6 @@
 <?php
-define('HELP_KIDS', 3);
-define('MEMBERSHIP_PAGE', 6);
+define('HELP_KIDS_PAGE', 3);
+define('MEMBERSHIP_ONLINE_PAGE', 6);
 
 require_once 'responsivecss.civix.php';
 
@@ -111,8 +111,17 @@ function responsivecss_civicrm_alterSettingsFolders(&$metaDataFolders = NULL) {
 
 function responsivecss_civicrm_buildForm( $formName, &$form ) {
   if ($formName == "CRM_Contribute_Form_Contribution_Main"
-    && in_array($form->_id, array(HELP_KIDS, MEMBERSHIP_PAGE))
+    && in_array($form->_id, array(HELP_KIDS_PAGE, MEMBERSHIP_ONLINE_PAGE))
   ) {
-    CRM_Core_Resources::singleton()->addStyleFile('org.civicrm.shoreditch', 'css/custom-civicrm.css', -50, 'html-header');
+    require_once '/home/bcadopt/domains/bcadoptcivi.jmaconsulting.ca/public_html/sites/all/modules/custom/bca_commons/Mobile_Detect.php';
+    $detect = new Mobile_Detect;
+
+    // Any mobile device (phones or tablets).
+    if ( $detect->isMobile() ) {
+      CRM_Core_Resources::singleton()->addStyleFile('biz.jmaconsulting.responsivecss', 'css/custom-civicrm.css', -50, 'html-header');
+      $civicrm_css = CRM_Core_Resources::singleton()->getUrl('civicrm', 'css/civicrm.css', TRUE);
+      CRM_Core_Region::instance('html-header')->update($civicrm_css, array('disabled' => TRUE));
+      CRM_Core_Resources::singleton()->addStyleFile('biz.jmaconsulting.responsivecss', 'css/responsive.css', -60, 'html-header');
+    }
   }
 }
